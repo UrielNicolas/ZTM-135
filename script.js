@@ -17,7 +17,7 @@ function createListElement() {
 	deleteButton.textContent = "Delete";
 	li.appendChild(deleteButton);
 	li = document.querySelectorAll("li");
-	listeForEvents(li);
+	listenForEvents(li);
 }
 
 function addListAfterClick() {
@@ -32,7 +32,7 @@ function addListAfterKeypress(event) {
 	}
 }
 
-function listeForEvents(list) {
+function listenForEvents(list) {
 	list.forEach(element => {
 		element.addEventListener("click", function(event) {
 			if (event.target.tagName === "LI") {
@@ -57,5 +57,5 @@ button.addEventListener("click", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
 
-listeForEvents(li);
+listenForEvents(li);
 
